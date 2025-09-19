@@ -15,15 +15,16 @@ Covers navigation via menus only, **Dynamic Properties**, **Web Tables**, **Uplo
 
 ## Install
 ```bash
+
 git clone https://github.com/brunfeijo/lumaUI.git
 cd lumaUI
 npm install
 
-
 ## All Specs
-npm test
-# or
-npm run cy:run
+npx cypress run
+
+## All specs with Mochawesome Report
+npm run test:with-report
 
 ## Interactive runner (GUI)
 npx cypress open
