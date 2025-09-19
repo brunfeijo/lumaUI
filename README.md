@@ -1,6 +1,6 @@
 # LumaUI E2E (Cypress + TypeScript)
 
-End-to-end tests for **DemoQA** (https://demoqa.com) using **Cypress**, **TypeScript**, and **faker**.  
+End-to-end tests for **DemoQA** (https://demoqa.com) using **Cypress**, **TypeScript**, **faker** and **mochawesome**  
 Covers navigation via menus only, **Dynamic Properties**, **Web Tables**, **Upload/Download**, and **Forms (Practice Form)**.
 
 ---
