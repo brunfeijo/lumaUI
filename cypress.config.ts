@@ -11,6 +11,10 @@ export default defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,
 
     setupNodeEvents(on, config) {
+      // Mochawesome plugin (handles merge + HTML after run)
+      require('cypress-mochawesome-reporter/plugin')(on);
+
+      // Your custom file tasks
       on('task', {
         // delete a single file if it exists
         deleteFileIfExists(filePath: string) {
@@ -39,4 +43,21 @@ export default defineConfig({
       return config;
     },
   },
+
+  // Use Mochawesome as the reporter (pure Node, no Java)
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    charts: true,
+    reportPageTitle: 'Cypress Test Report',
+    embeddedScreenshots: true,
+    inlineAssets: true,        // saves CSS/JS inline for a single-file HTML
+    overwrite: true,
+    saveAllAttempts: false
+  },
+
+  // (optional) keep videos/screenshots for the report
+  video: true,
+  screenshotsFolder: 'cypress/screenshots',
+  videosFolder: 'cypress/videos',
 });

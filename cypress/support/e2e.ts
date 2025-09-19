@@ -1,5 +1,6 @@
 // cypress/support/e2e.ts
-import './commands';  // 👈 this line is required
+import './commands';
+import 'cypress-mochawesome-reporter/register';
 
 // (optional) ignore noisy cross-origin script errors
 Cypress.on('uncaught:exception', (err) => {
