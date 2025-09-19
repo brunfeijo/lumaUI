@@ -23,8 +23,5 @@ npm install
 ## All Specs
 npx cypress run
 
-## All specs with Mochawesome Report
-npm run test:with-report
-
 ## Interactive runner (GUI)
 npx cypress open
